@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair", sans-serif;
+}
+body{
+    min-height: 1000px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background: #0000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+}
+header.sticky{
+    height: 100px;
+
+}
+header .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1.5s;
+}
+header.sticky .banner{
+    opacity: 1;
+    z-index: -1;
+}
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -50%);
+    font-size: 15vw;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 1s;
+    z-index: 1;
+    
+}
+header.sticky .logo{
+    position: absolute;
+    font-size: 2em;
+    left: 100px;
+    transform: translate(0,-50%);
+}
+#navbar{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+#navbar ul {
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 1;
+}
+header.sticky . .toggle{
+
+}
+header.sticky #navbar ul li a{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+#navbar, ul, li{
+    list-style: none;
+}
+#navbar, ul, li, a {
+    color: rgb(255, 255, 255, 0.5);
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    z-index: 2;
+    background-color: black;
+    
+}
+ #navbar, ul, li, a:hover{
+    color: #cf7676;
+} 
+
+section {
+    margin-top: 70vh;
+    margin-bottom: 0;
+    padding: 100px 50px 0px 50px;
+    z-index: -1;
+}
+section h2{
+    font-size: 5em;
+}
+section p{
+    font-size: 1.5em;
+
+}
+.lower{
+  
+    padding right: 10px;
+    margin: 0;
+    max-width: 93vw;
+    max-height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 991px){
+    section 
+    header{
+        padding: 40px 20px;
+    }
+    section h2{
+        font-size: 2em;
+        padding-top: 5px;
+    }
+    header.sticky .logo{
+        left: 40px;
+    }
+    header.sticky .banner{
+        opacity: 1;
+    }
+    .banner{
+        z-index: 1;
+    }
+    nav, ul{
+        display: none;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav.active, ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        opacity: 1;
+        visibility: visible;
+
+    }
+    #navbar, ul, li, a:hover{
+        color: rgb(206, 128, 128);
+    }
+    header.sticky .toggle {
+        position: fixed;
+        top: 15px;
+        right: 30px;
+        width: 50px;
+        height: 60px;
+        cursor: pointer;
+        background: rgb(255, 255, 255) url(x.png);
+        opacity:0.85;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: right;
+        
+    }
+    header.sticky .toggle.active{
+        background: rgb(255, 255, 255) url(burger.png);
+        background-size: 45px;
+        opacity: 0.85;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    
+}

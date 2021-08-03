@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Krebs Scroll</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        </head>
+    <body>
+      <header id="top">
+         <img src="bg_1.jpg" class="banner">
+         
+            <a href="#" class="logo">
+                <span>Krebs.</span>
+            </a>
+        <div class="toggle active"></div>
+            <nav>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </nav>
+        
+      </header>
+
+      <section>
+          <h2>Krebs.</h2>
+          <p>Lorem ipsum dolor sit amet. blanditiis eligendi cum earum dolorem et possimus quae aut commodi quaerat. Non vero vitae non maiores dolorem est excepturi veritatis qui recusandae dolore ut galisum beatae.
+            Sit similique ipsa qui dolores cumque ut tenetur molestiae et aliquam accusantium. Hic pariatur error aut quae nulla ut magni placeat est dolor maiores est totam veritatis ea laboriosam error? Et rerum voluptatem et ullam culpa est tempora minima. Eum architecto quasi cum voluptatem accusantium et iste soluta!
+            Ut possimus culpa et aperiam id itaque necessitatibus id voluptatem soluta ut quisquam officia. Qui porro consequatur sit aspernatur omnis vel incidunt ratione rem corrupti molestiae. Ad vitae aspernatur et provident nisi in voluptas rerum sit dolore optio.
+            Lorem ipsum dolor sit amet. blanditiis eligendi cum earum dolorem et possimus quae aut commodi quaerat. Non vero vitae non maiores dolorem est excepturi veritatis qui recusandae dolore ut galisum beatae.
+            Lorem ipsum dolor sit amet. blanditiis eligendi cum earum dolorem et possimus quae aut commodi quaerat. Non vero vitae non maiores dolorem est excepturi veritatis qui recusandae dolore ut galisum beatae.
+            
+            </p>
+     
+        <script >
+            window.addEventListener("scroll", function(){
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 399);
+            });
+            const navigation = document.querySelector('nav');
+
+            document.querySelector('.toggle').onclick = function(){
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
+            };
+           
+        </script>
+    </body>
+</html>
